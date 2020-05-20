@@ -1,0 +1,41 @@
+@{
+    ViewBag.Title = "Add Book";
+}
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Add book Form</title>
+</head>
+<style>
+    input[type=text], input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+    }
+</style>
+<body>
+    <h1>Add Book</h1>
+    <form method="post" action="adbook">
+        <fieldset>
+            Name: <input type="text" placeholder="Enter name of book" name="name" required /><br /><br />
+            Author:<input type="text" placeholder="Enter name of author" name="author" required /><br /><br />
+            Copies:<input type="text" placeholder="Enter the number of copies of book" name="copies" required /><br /><br />
+            <button type="submit">Add Book</button>
+        </fieldset>
+    </form>
+</body>
+</html>

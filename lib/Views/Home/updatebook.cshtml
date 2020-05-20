@@ -1,0 +1,62 @@
+@model List<lib.Models.book>
+@{
+    ViewBag.Title = "viewBooks";
+}
+
+<div class="limiter">
+    <div class="container-table100">
+        <div class="wrap-table100">
+            <div class="table100">
+                @if (Model.Count <= 0)
+                {
+                    <h2 style="color:black">No books based on your requirements</h2>
+                }
+                else
+                {
+                    <h2 class="form-title" style="color:black">Books</h2>
+                    <table>
+                        <thead>
+                            <tr class="table100-head">
+                                <th class="column1">Book ID</th>
+                                <th class="column1">Book Name</th>
+                                <th class="column3">Book Author</th>
+                                <th class="column4">Book copies</th>
+                                <th class="column8"></th>
+                                <th class="column8"></th>
+
+
+                            </tr>
+                        </thead>
+
+                        @foreach (var m in Model)
+                        {
+                            <tbody>
+                                <tr>
+                                    <td class="column1">@m.id</td>
+                                    <td class="column1">@m.name</td>
+                                    <td class="column3">@m.author</td>
+                                    <td class="column4">@m.copies</td>
+                                    <td class="column1">
+                                        <form action="update" method="post">
+                                            <input type="hidden" name="id" value="@m.id" />
+                                            <input type="submit" value="Update" style="width: 100px; height: 50px;background: lightblue;border: 1px solid #fff; cursor: pointer;border-radius: 20px; color: black; font-family: 'Exo', sans-serif;font-size: 16px; font-weight: 400;padding: 10px;margin-top: 10px;  margin-left: 90px;" />
+                                        </form>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        }
+
+
+
+
+                    </table>
+                }
+                <br />
+                <br />
+                <br />
+                <br />
+
+            </div>
+        </div>
+    </div>
+</div>
