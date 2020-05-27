@@ -1,0 +1,70 @@
+@{
+    ViewBag.Title = "Add Book";
+}
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Add book Form</title>
+</head>
+<style>
+    input[type=text], input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+    }
+</style>
+<body>
+    <h1>Add Book</h1>
+    <form method="post" action="adbook">
+        <fieldset>
+            Name: <input type="text" placeholder="Enter name of book" name="name" required /><br /><br />
+            Author:<input type="text" placeholder="Enter name of author" name="author" required /><br /><br />
+            Copies:<input type="text" placeholder="Enter the number of copies of book" name="copies" required /><br /><br />
+            <label for="cars">Choose the category of the book:</label>
+            <select name="cat" id="books" multiple required>
+                <option value="Fantasy">Fantasy</option>
+                <option value="Adventure">Adventure</option>
+                <option value="Romance">Romance</option>
+                <option value="Contemporary">Contemporary</option>
+                <option value="Dystopian">Dystopian</option>
+                <option value="Mystery">Mystery</option>
+                <option value="Horror">Horror</option>
+                <option value="Thriller">Thriller</option>
+                <option value="Paranormal">Paranormal</option>
+                <option value="Historical fiction">Historical fiction</option>
+                <option value="Science Fiction">Science Fiction</option>
+                <option value="Memoir">Memoir</option>
+                <option value="Cooking">Cooking</option>
+                <option value="Art">Art</option>
+                <option value="Personal">Personal</option>
+                <option value="Development">Development</option>
+                <option value="Motivational">Motivational</option>
+                <option value="Health">Health</option>
+                <option value="History">History</option>
+                <option value="Travel">Travel</option>
+                <option value="Guide">Guide</option>
+                <option value="Families & Relationships">Families & Relationships</option>
+                <option value="Humor">Humor</option>
+                <option value="Children’s">Children’s</option>
+            </select>
+            <br><br>
+
+            <button type="submit">Add Book</button>
+        </fieldset>
+    </form>
+</body>
+</html>

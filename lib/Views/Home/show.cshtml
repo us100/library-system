@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "show";
+}
+
+<html>
+   <body>
+
+    <h1>The select multiple attribute</h1>
+
+    <p>Select the genre you want to see:</p>
+
+        <form method="post" action="showbook">
+            <label for="boo">Choose the category you want to see:</label>
+            <select name="cat" id="books" multiple>
+                <option value="Fantasy">Fantasy</option>
+                <option value="Adventure">Adventure</option>
+                <option value="Romance">Romance</option>
+                <option value="Contemporary">Contemporary</option>
+                <option value="Dystopian">Dystopian</option>
+                <option value="Mystery">Mystery</option>
+                <option value="Horror">Horror</option>
+                <option value="Thriller">Thriller</option>
+                <option value="Paranormal">Paranormal</option>
+                <option value="Historical fiction">Historical fiction</option>
+                <option value="Science Fiction">Science Fiction</option>
+                <option value="Memoir">Memoir</option>
+                <option value="Cooking">Cooking</option>
+                <option value="Art">Art</option>
+                <option value="Personal">Personal</option>
+                <option value="Development">Development</option>
+                <option value="Motivational">Motivational</option>
+                <option value="Health">Health</option>
+                <option value="History">History</option>
+                <option value="Travel">Travel</option>
+                <option value="Guide">Guide</option>
+                <option value="Families & Relationships">Families & Relationships</option>
+                <option value="Humor">Humor</option>
+                <option value="Children’s">Children’s</option>
+
+            </select>
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+   </body>
+</html>
